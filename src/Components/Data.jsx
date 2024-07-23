@@ -13,7 +13,7 @@ const Data = () => {
     useEffect(() => {
         if (isAuthenticated) {
             const getData = async () => {
-                const res = await fetch('http://localhost:8000/getData');
+                const res = await fetch('https://backend-ent.onrender.com/getData');
                 const data = await res.json();
                 console.log(data);
                 setD(data.data);

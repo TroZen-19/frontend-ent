@@ -37,7 +37,7 @@ const Home = () => {
           return;
       }else{
             
-        const response = await axios.post("http://localhost:8000/register" , data, config);
+        const response = await axios.post("https://backend-ent.onrender.com/register" , data, config);
         
         const emailData = {
             name,
@@ -53,7 +53,7 @@ const Home = () => {
             Course Interest: ${courseinterest}`
         }
 
-        await axios.post("http://localhost:8000/sendEmail", {name:name,email:email,message:"We will get to you soon !!"});
+        await axios.post("https://backend-ent.onrender.com/sendEmail", {name:name,email:email,message:"We will get to you soon !!"});
         alert("Registration successful and email sent!");
         
 
